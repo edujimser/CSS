@@ -1,0 +1,34 @@
+Creación de variable para CSS
+
+Sirve para la reutilización rápida de código dentro del CSS, además es una forma fácil de poder cambiar la configuración rápida de la página web 
+los valores de la variables dentro de :root{}
+
+
+Estructura -->
+
+    :root {
+        --fuentePrincipal: 'Roboto', sans-serif;
+        --fuenteSecundaria: 'Lato', sans-serif;
+    }
+
+    - Utlizamos root para declarar las variable.
+    - Nombramos las variables
+    - Como valores de la variables podemos utilizar cualquier propiedad de CSS
+
+Modo de inserción -->
+
+    body {
+    font-family: var(--fuentePrincipal);
+    }
+
+    - Para llamar a la variable usamo var(--nombreVariable)
+
+Ejemplo de paleta de colores con Custom Propierties -->
+
+:root {
+     --primario: #1073ba;
+     --secundario:#00DA55;
+     --gris: #3b3b3b;
+     --negro: #1f1e1e;
+     --grisClaro: #e1e1e1;
+}

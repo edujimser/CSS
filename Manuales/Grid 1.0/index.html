@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Básicos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="contenedor">
+
+        <h2>1.- Display Grid</h2>
+
+        <div class="grid-1">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>.grid-1{</br>
+                display: grid;</br>
+                }
+            </p>
+        </div>
+
+        <h2>2.- Grid Template Columns</h2>
+
+        <div class="grid-2">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+            <div class="box">
+                4
+            </div>
+            <div class="box">
+                5
+            </div>
+            <div class="box">
+                6
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-2{ </br>
+                display: grid; </br>
+                grid-template-columns: 200px 200px 200px; </br>
+                }
+            </p>
+        </div>
+
+        <h2>3.- Grid Template Rows</h2>
+
+        <div class="grid-3">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+            <div class="box">
+                4
+            </div>
+            <div class="box">
+                5
+            </div>
+            <div class="box">
+                6
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-3{</br>
+                display: grid;</br>
+                grid-template-rows: 300px 300px 300px;</br>
+                }</br>
+
+                .grid-3 .box:nth-child(2){</br>
+                grid-row-start: 1;</br>
+                grid-row-end: 2;</br>
+                }
+            </p>
+        </div>
+
+        <h2>4.- Span</h2>
+
+        <div class="grid-4">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+            <div class="box">
+                4
+            </div>
+            <div class="box">
+                5
+            </div>
+            <div class="box">
+                6
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-4{</br>
+                display: grid;</br>
+                grid-template-columns: repeat(3, 300px);</br>
+                grid-template-rows: repeat(2, 300px);</br>
+                }
+            </p>
+        </div>
+
+
+        <h2>5.- Grid Shorthand</h2>
+
+        <div class="grid-5">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+            <div class="box">
+                4
+            </div>
+            <div class="box">
+                5
+            </div>
+            <div class="box">
+                6
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-4{</br>
+                display: grid;</br>
+                grid-template-columns: repeat(3, 300px);</br>
+                grid-template-rows: repeat(2, 300px);</br>
+                }</br>
+
+                .grid-4 .box:nth-child(2){</br>
+                background-color: #00b74f;</br>
+                grid-column: 2 / span 2;</br>
+                grid-row: 1 / span 2;</br>
+                }
+            </p>
+        </div>
+
+        <h2>6.- Grid Autoflow</h2>
+
+        <div class="grid-6">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+            <div class="box">
+                4
+            </div>
+            <div class="box">
+                5
+            </div>
+            <div class="box">
+                6
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-6{</br>
+                display: grid;</br>
+                grid: repeat(2, 300px) / repeat(3, 300px);</br>
+                grid-auto-flow: dense;</br>
+                }</br>
+
+
+                .grid-6 .box:nth-child(2){</br>
+                grid-column: 1 / 2;</br>
+
+                }
+            </p>
+        </div>
+
+        <h2>7.- Grid Fr y Grid Repeat</h2>
+
+        <div class="grid-7">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+            <div class="box">
+                4
+            </div>
+            <div class="box">
+                5
+            </div>
+            <div class="box">
+                6
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-7{</br>
+                display: grid;</br>
+                grid: repeat(2, 1fr) / 2fr repeat(2, 1fr);</br>
+                }
+            </p>
+        </div>
+
+
+        <h2>8.- Grid Gap</h2>
+
+        <div class="grid-8">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+            <div class="box">
+                4
+            </div>
+            <div class="box">
+                5
+            </div>
+            <div class="box">
+                6
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-8{</br>
+                display: grid;</br>
+                grid: repeat(2, 1fr) / repeat(3, 1fr);</br>
+                gap: 4rem 4rem ;</br>
+                }
+            </p>
+        </div>
+
+        <h2>9.- Grid Areas</h2>
+
+        <div class="grid-9">
+            <div class="box">
+                Header
+            </div>
+            <div class="box">
+                Nav
+            </div>
+            <div class="box">
+                Principal
+            </div>
+            <div class="box">
+                Sidebar
+            </div>
+            <div class="box">
+                Footer
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-9{</br>
+                display: grid;</br>
+                height: 120rem;</br>
+
+                grid-template-columns: repeat(3, 1fr);</br>
+                grid-template-rows: 25rem 10rem 60rem 25rem;</br>
+                grid-template-areas: "header header header"</br>
+                "nav nav nav"</br>
+                "principal principal sidebar"</br>
+                "footer footer footer"</br>
+                ;</br>
+                }</br>
+
+
+                .grid-9 .box:nth-child(1){</br>
+                grid-area: header;</br>
+                }</br>
+
+                .grid-9 .box:nth-child(2){</br>
+                grid-area: nav;</br>
+                }</br>
+
+                .grid-9 .box:nth-child(3){</br>
+                grid-area: principal;</br>
+                }</br>
+
+                .grid-9 .box:nth-child(4){</br>
+                grid-area: sidebar;</br>
+                }</br>
+
+                .grid-9 .box:nth-child(5){</br>
+                grid-area: footer;</br>
+                }</br>
+            </p>
+        </div>
+
+
+        <h2>10.- Grid Template</h2>
+
+        <div class="grid-10">
+            <div class="box">
+                Header
+            </div>
+            <div class="box">
+                Nav
+            </div>
+            <div class="box">
+                Principal
+            </div>
+            <div class="box">
+                Sidebar
+            </div>
+            <div class="box">
+                Footer
+            </div>
+        </div>
+
+
+        <div class="texto">
+            <p>
+                .grid-10{</br>
+                display: grid;</br>
+                height: 120rem;</br>
+
+                grid-template-areas: "header header header" 25rem</br>
+                "nav nav nav" 10rem</br>
+                "principal principal sidebar" 60rem</br>
+                "footer footer footer" 25rem / 1fr 1fr 1fr</br>
+                ;</br>
+                }
+
+
+                .grid-10 .box:nth-child(1){</br>
+                grid-area: header;</br>
+                }</br>
+
+                .grid-10 .box:nth-child(2){</br>
+                grid-area: nav;</br>
+                }</br>
+
+                .grid-10 .box:nth-child(3){</br>
+                grid-area: principal;</br>
+                }</br>
+
+                .grid-10 .box:nth-child(4){</br>
+                grid-area: sidebar;</br>
+                }</br>
+
+                .grid-10 .box:nth-child(5){</br>
+                grid-area: footer;</br>
+                }</br>
+            </p>
+        </div>
+
+
+        <h2>11.- Alineación Grid </h2>
+
+        <div class="grid-11">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+            <div class="box">
+                4
+            </div>
+            <div class="box">
+                5
+            </div>
+            <div class="box">
+                6
+            </div>
+        </div>
+
+
+        <div class="texto">
+            <p>
+                .grid-11{</br>
+                display: grid;</br>
+                grid-template-columns: repeat(6, 1fr);</br>
+                height: 30rem;</br>
+                place-content: end;</br>
+                }
+            </p>
+        </div>
+
+
+
+
+        <h2>12.- Grid Autofill y Autofit</h2>
+
+        <div class="grid-12">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-12{</br>
+                display: grid;</br>
+                grid-template-columns: repeat(auto-fill, 200px);</br>
+                }
+            </p>
+        </div>
+
+        <h2>12.1 Autofit</h2>
+
+        <div class="grid-12-1">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div>
+    
+
+        <div class="texto">
+            <p>
+                .grid-12-1{</br>
+                display: grid;</br>
+                grid-template-columns: repeat(auto-fit, 200px);</br>
+                }
+            </p>
+        </div>
+
+
+        <h2>12.2 Autofit MinMax</h2>
+
+        <div class="grid-12-2">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div>
+
+        <div class="texto">
+            <p>
+                .grid-12-2 {</br>
+                display: grid;</br>
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</br>
+                }</br>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

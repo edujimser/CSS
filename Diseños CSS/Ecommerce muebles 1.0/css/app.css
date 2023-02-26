@@ -1,0 +1,468 @@
+
+
+/** GLOBALES -----------------------------------------------------------  **/
+
+html {
+    box-sizing: border-box; /** Hace que el páding no modifique el tamaño de los elementos  **/
+    font-size: 62.5%; /** Transformacion de 10x para rem  **/
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+h1 {
+    font-family:'Playfair Display', serif;
+    color: rgba(77, 77, 77, 0.788);
+}
+
+h1 {
+    font-family:'Playfair Display', serif;
+    margin: 0;
+    font-size: 4rem;
+}
+
+h2, h3 {
+    font-family:'Playfair Display', serif;
+    margin: 0;
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h1 span{
+    color:  #037bc0 
+}
+
+a {
+text-decoration: none;
+color: black;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 2; /** Separación de texto **/
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+nav {
+    font-size: 2rem;
+}
+
+
+
+/** HEADER Y NAVEGACION ---------------------------------------------------------------- **/
+.nombre-sitio {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.contenedor-navegacion {
+    width: 100%;
+    border-top: 0.1rem solid #e1e1e1;
+}
+
+.nav-principal {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}
+
+/** CATEGORIAS**/
+.categorias{
+    padding-top: 5rem;
+}
+
+
+.categorias h2 {
+    text-align: center;
+}
+
+.listado-categorias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.categoria a{
+     display: block;
+     text-align: center;
+     padding-top: 2rem;
+     padding-bottom: 0.8rem;
+     font-size: 2rem;
+}
+
+.categoria a:hover{
+    background-color: rgba(31, 68, 233, 0.788);
+    color: #ffffff;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+
+
+
+/** BLOQUE NOSOTROS ------------------------------------------------------------------- **/
+.sobre-nosotros { /**  Creaos la fusion con un degradado**/
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%), url(../img/nosotros.jpg);
+    background-repeat: no-repeat; /**  No se repita la imagen si se sobre sale**/
+    background-position:  center; /**  La imagen la centramos**/
+    padding: 15rem 0 15rem 0; /** Crear más espacios para imagen **/
+    background-size: 100%, 100%; /**  El tamaños del azul y el de la imagen**/
+
+}
+
+.sobre-nosotros-grid{ 
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.sobre-nosotros-texto{
+   flex-basis: 50%;
+   padding-left: 4rem;
+   color: white;
+
+}
+
+
+/** Utilidades **/
+.text-center{
+    text-align: center;
+}
+
+/** Nuestros Productos  ----------------------------------------------------------------------------------------------------------------------------------**/
+
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+
+.listado-producto {
+    display: grid; 
+     grid-template-columns: repeat(6, 1fr);
+     column-gap: 2rem;
+     row-gap: 2rem;
+}
+
+.producto:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.producto:nth-child(2) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.producto:nth-child(3) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(4) img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(5) img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(6){
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.producto:nth-child(6) img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto {
+    background-color: #037bc0;
+}
+
+.texto-producto {
+    padding: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p{
+    margin: 0;
+}
+
+
+.texto-producto  .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+.texto-producto a{
+    padding: 1rem;
+    background-color: #3ec074;
+    display: block;
+    color:  white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: background-color .3s ease-out;
+}
+
+.texto-producto a:hover{
+    background-color: #34a764;
+}
+
+
+/** FOOTER  ------------------------------------------------------------------- **/
+.site-footer{
+    margin-top: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    border: 1px solid #e1e1e1;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.grid-footer h3{
+    font-size: 2rem;
+    margin:auto;
+}
+
+.footer-menu a{
+    font-size: 1.2rem;
+    display: block;
+}
+
+.copyright{
+    font-size: 1rem;
+    margin: 6rem;
+    text-align: center;
+}
+
+
+/** SOBRE NOSOTROS  ----------------------------------------------------------------------------------------------------------------------------------**/
+/** CSS SOBRE NOSOTROS ----------------------------------------------------------------------------------------------------------------------------------**/
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.imagen{
+    margin-top: 0.8rem;
+}
+
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.informacion-nosotros p{
+    margin-top: 0rem;
+}
+
+
+
+/** CSS BLOG  ----------------------------------------------------------------------------------------------------------------------------------**/
+/** BLOG  ----------------------------------------------------------------------------------------------------------------------------------**/
+
+.contenedor-blog{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5rem;
+}
+
+.entrada {
+   border-bottom: 2px solid #e1e1e1;
+   padding-top: 3rem;
+   margin-bottom: 2rem;
+}
+
+.entrada:last-child{
+    border-bottom: none;
+}
+
+.entrada-meta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0rem;
+}
+
+.entrada-meta p {
+    font-size: 1.2rem;
+}
+
+.entrada-meta span{
+    font-style: italic;
+}
+
+.btn {
+    padding: 1rem;
+    background-color: #3ec074;
+    display: block;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: background-color .3s ease-out;
+    max-width: 20rem;
+    max-height: 4rem;
+    margin-bottom: 2rem;
+    border-radius: 15% / 40%;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #2c9557;
+    cursor: pointer;
+}
+
+
+
+/** CSS ENTRADA  ----------------------------------------------------------------------------------------------------------------------------------**/
+/** ENTRADA  ----------------------------------------------------------------------------------------------------------------------------------**/
+
+.contenedor-entrada{
+    width: 80rem;
+    margin: auto;
+}
+
+
+/** CSS GALERIA  ----------------------------------------------------------------------------------------------------------------------------------**/
+/** galeria  ----------------------------------------------------------------------------------------------------------------------------------**/
+
+.galeria{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.galeria img{
+    width: 390px;
+    height: 250px;
+}
+
+
+
+/** CSS FORMULARIO  ----------------------------------------------------------------------------------------------------------------------------------**/
+/** FORMULARIO  ----------------------------------------------------------------------------------------------------------------------------------**/
+
+.formulario {
+    max-width: 60rem;
+    margin: auto;
+}
+
+.formulario fieldset{
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.formulario legend{
+    background-color: #037bc0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.campo label{
+    flex-basis: 10rem;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo textarea,
+.campo select, 
+#categorias
+{
+    flex:1;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
