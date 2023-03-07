@@ -1,0 +1,28 @@
+Creación de Media Query para CSS
+
+Sirve para la adaptación del contenido respecto al tamaño de pantalla de los dispositivos. Existe dos forma:
+    - @media(min-width): dispotivo movil a dispotivo PC "Primero movil"
+    - @media(max-width): dispotivo PC a dispotivo a movil "Primero PC"
+
+El formato más utilizado es min-width de movil a pc aunque se puede utilizar el otro.
+
+
+Estructura -->
+
+    .texto-header{ (A)
+        text-align: center;
+        padding-top: 5rem;
+    }@media(min-width:768px){ (B)
+        .texto-header{
+            text-align: left;
+            padding:0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    - (A): contenido: movil
+    - (B): contenido: PC
+    - @media(min-width:768px): Media Query
+        - min-width: tamaño 768px > activa el contenido encapsulado
