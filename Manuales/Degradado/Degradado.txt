@@ -1,0 +1,32 @@
+Creación de degrados para CSS
+
+Sirve para dar color de forma combinada a diferentes colores
+
+
+Estructura HTML -->
+
+    <h1 class="nombre-producto degradado-verde">TechPRO</h1>
+
+    - degradado-verde: clase para el CSS
+
+
+Estructura CSS -->
+    Estructura CSS variables -->
+        :root {
+            --primario: #1073ba;
+            --secundario:#00DA55;
+        }
+
+    - Declaración de variable --primario y --secundario de colores 
+
+    Estructura CSS Degradado -->
+        .degradado-verde{
+            color:transparent;
+            background: linear-gradient(to right, var(--primario) 0%, var(--secundario) 100%);
+            -webkit-background-clip:text;
+        }
+
+    - color: del texto trasparente para aceptar el degrado
+    - linear-gradient( inicio del color, variable color / pocentaje de inicio, finalización del color, variable color / porcentaje)
+    - webkit-background-clip: recurso de indicación de donde usar el background
+        - text: lugar de inserción 
