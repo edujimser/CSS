@@ -41,7 +41,11 @@ Estructura CSS inserción -->
 
         - linear-gradient:  linear-gradient([ángulo | dirección], transparent 50%, color-stop2 -porcentaje)url(ruta);
             - Dirección - transparencia - tamaños de porcentaje para la imagen - color y ruta
-
+            - background-position: posición de la imagen
+            - background-repeat: repetir imagen por tamaño web mayor que la página
+            -background-size:
+                - cover: cubre toda la pantalla
+                - contain: cubre el contenedor puede tener espacios en blancos
 
     .sobre-tech-grid{
         display: grid;
