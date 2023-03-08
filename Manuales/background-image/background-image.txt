@@ -1,0 +1,66 @@
+Creación de background-image para CSS
+
+Sirve para la adaptación de imagen con contenido de texto posicionandolo dentro de un contenedor dividiendo el contenido entre 
+imagen y teto, o imagen con imagen y texto con texto. La imagen es introducida desde CSS en el contenedor principal, a diferencia
+de img. En resumen, "linear-gradient" es una función CSS útil para crear efectos visuales degradados en los elementos HTML, como 
+fondos de páginas web, botones, etc.
+
+
+
+Estructura HTML -->
+
+    <section class="sobre-tech">
+        <div class="contenedor sobre-tech-grid">
+            <div class="texto-sobre-tech">
+                <h2>Sobre los <span>TechPrho</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium assumenda molestiae blanditiis repellendus facilis possimus in dolorem quos obcaecati culpa beatae dignissimos, omnis explicabo eveniet voluptates quibusdam harum hic maxime.</p>
+            </div>
+        </div>
+    </section>
+
+    - class="sobre-tech": contenedor para la imagen desde el css y el contenido del HTML
+
+
+Estructura CSS inserción -->
+
+    .sobre-tech{
+        background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.avif);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    -  background-image: 
+        - linear-gradient:  linear-gradient([ángulo | dirección], color-stop1 -porcentaje, color-stop2 - porcentaje, ...);
+            - Ángulo: "0deg", "90deg"...
+            - Dirección: "to top", "to bottom", "to left", "to right", "to top left", "to top right", "to bottom left" y "to bottom right".
+            - color-stop1: podría ser "red 0%", lo que significa que el color rojo comenzará en el inicio del gradiente.
+                - Porcentaje: indica el inicio de la posición del degrado 0% posición inicio - 100% posición final
+            - color-stop2 podría ser "blue 100%", lo que significa que el color azul se utilizará en el final del gradiente.
+
+        - linear-gradient:  linear-gradient([ángulo | dirección], transparent 50%, color-stop2 -porcentaje)url(ruta);
+            - Dirección - transparencia - tamaños de porcentaje para la imagen - color y ruta
+
+
+    .sobre-tech-grid{
+        display: grid;
+        grid-template-rows: repeat(2, 40rem);
+        row-gap: var(--separacion);
+    }   
+
+    - Sería dos elementos lo que conformaría el Grid:
+        - El div texto-sobre-tech
+        - linear-gradient
+    
+
+    .texto-sobre-tech{
+        grid-row: 2/3;
+        color: var(--grisClaro);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    - grid-row : posición de texto
+    - display: posicionar el h3 y p
