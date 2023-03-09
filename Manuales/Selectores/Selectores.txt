@@ -1,0 +1,350 @@
+Creación de Selectores para CSS
+
+Sirve para la selección de los diferentes elementos que forman el HTML, gracias a los selectores podemos elegir etiquetas agrupadas dentro de box, div....
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.- Selector de Etiqueta ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-1">
+        <p>Primer Texto</p>
+        <p>Segundo Texto</p>
+        <p>3er Texto</p>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-1 p{
+        color: red;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.- Selector de Clase ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-2">
+        <p class="primer-parrafo">Primer Texto</p>
+        <p>Segundo Texto</p>
+        <p>3er Texto</p>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-2 .primer-parrafo{
+        color: red;
+        font-size: 20px;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.- Selector de 2 Clases ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-3">
+        <p class="texto">Primer Texto</p>
+        <p class="texto azul mayusculas">Segundo Texto</p>
+        <p class="texto">3er Texto</p>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-3 .texto{
+        color: rgb(255, 255, 255);
+        background-color: rgb(255, 0, 0);
+    }
+
+    .codigo-3 .texto.azul{
+        color: blue;
+    }
+
+    .codigo-3 .texto.mayusculas{
+        text-transform: uppercase;
+    }
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.- Selector de Clases Anidadas ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-4">
+        <header class="header">
+            <div class="descripcion">Descripción sitio web</div>
+        </header>
+        <div class="descripcion">Segunda Descripción</div>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-4 .header .descripcion{
+        color:  rgb(255, 0, 0);
+    }
+
+    .codigo-4 .descripcion{
+        color: blue;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.- Selector de ID ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-5">
+        <p id="encabezado" class="texto">Primer Texto</p>
+        <p class="texto">Segundo Texto</p>
+        <p class="texto">3er Texto</p>
+    </div
+
+
+Estructura CSS -->
+
+    .codigo-5 #encabezado{
+        color: red;
+    }
+
+    .codigo-5 .texto{
+        color: blue;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.- Selector de Etiqueta y Clase ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-6">
+        <p class="texto">Primer Texto</p>
+        <p class="texto">Segundo Texto</p>
+        <p class="texto">3er Texto</p>
+
+        <div class="texto">
+            Oferta Especial!
+        </div>
+    </div>
+
+
+Estructura CSS -->
+
+    div.texto{
+        color: red;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7.- Dos Elementos  ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-7">
+        <p class="texto">Primer Texto</p>
+        <p class="texto">Segundo Texto</p>
+        <p class="texto">3er Texto</p>
+
+        <div class="oferta">
+            Oferta Especial!
+        </div>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-7 .texto , .oferta{
+        border: 2px solid yellow;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8.- Primer Nivel de Hijos  ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-8">
+        <div class="admin">
+            <div>
+                <p>Has Iniciado sesión como: Admin</p>
+                <div>
+                    <p>Cerrar Sesión aquí</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-8 .admin > div{
+        border: 2px solid yellow;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.- Primer Elemento Después  ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-9">
+        <div class="admin">
+            <div>
+                <p>Cerrar Sesión aquí</p>
+            </div>
+            <p>Has Iniciado sesión como: Admin</p>
+        </div>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-9 .admin div + p{
+        border: 2px solid yellow;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.- Atributo  ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-10">
+        <nav>
+            <a href="http://www.google.com">Google</a>
+            <a href="tienda.html">Tienda</a>
+        </nav>
+
+        <input type="tel" id="telefono"  value="1212" />
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-10 a[href="http://www.google.com"]{
+        color:red
+    }
+
+    .codigo-10 input[value="1212"]{
+        color: blue;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11.- Primer Hijo de una lista  ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-11">
+        <p>Lista de Compras</p>
+        <ul>
+            <li>Compra 1</li>
+            <li>Compra 2</li>
+            <li>Compra 3</li>
+            <li>Compra 4</li>
+            <li>Compra 5</li>
+        </ul>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-11 ul li:first-child{
+        color: red;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12.- último Hijo de una lista  ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-12">
+        <p>Lista de Compras</p>
+        <ul>
+            <li>Compra 1</li>
+            <li>Compra 2</li>
+            <li>Compra 3</li>
+            <li>Compra 4</li>
+            <li>Compra 5</li>
+        </ul>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-12 ul li:last-child{
+        color: red;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13.- Elemento en Especifico  ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-13">
+        <p>Lista de Compras</p>
+        <ul>
+            <li>Compra 1</li>
+            <li>Compra 2</li>
+            <li>Compra 3</li>
+            <li>Compra 4</li>
+            <li>Compra 5</li>
+        </ul>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-13 ul li:nth-child(2n + 1){
+        color: red;
+    }
+    
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14.- Seleccionar todos los elementos excepto uno o unos  ...............
+
+Estructura HTML -->
+
+    <div class="codigo codigo-14">
+        <div class="elementos">
+            <p class="texto">Texto 1</p>
+            <p class="heading">Texto 2</p>
+            <p class="descripcion">Texto 3</p>
+            <p class="oferta-14">Texto 4</p>
+        </div>
+    </div>
+
+
+Estructura CSS -->
+
+    .codigo-14 div p:not(.heading) {
+        color: red;
+    }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15.- Primer Letra y Linea  ...............
+
+Estructura HTML -->
+
+        <div class="codigo codigo-15">
+                <p class="primera-letra"> Primer parrafo de una noticia</p>
+                <p class="primera-letra"> Primer parrafo de una noticia</p>
+                <p class="primera-linea">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, quis repellat quae laborum libero quod nemo placeat alias inventore sit optio dolores, doloribus possimus, provident eligendi beatae asperiores quam maiores!</p>
+        </div>
+
+Estructura CSS -->
+
+    .codigo-15 .primera-letra::first-letter {
+        color: red;
+    }
+
+    .codigo-15 .primera-linea::first-line {
+        color: red;
+    }
