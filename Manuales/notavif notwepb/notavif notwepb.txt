@@ -1,0 +1,30 @@
+Creación de imagnes adaptadas desde el css para CSS
+
+Algunos navegadores nos permiten el uso de formatos webp o avif. Si usamos un background-image desde el css nos quedamos limitados por el formato
+que nosotros introduzcamos. Gracias al archivo js podemos introducir las imagenes dependiendo de su aceptación del navegador, delimitadas por 
+una sola carga.
+
+
+Estructura HTML -->
+
+<body>
+    <script src="verificador.js"></script>
+</body>
+
+
+Estructura CSS -->
+
+.notavif .notwebp .claseDelHTMLDondeLocalizarLaImagen{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.jpg);
+}
+
+.avif .claseDelHTMLDondeLocalizarLaImagen{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.avif);
+}
+
+.webp .claseDelHTMLDondeLocalizarLaImagen{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.webp);
+}
+
+    - Deberemos añadir las cuatro clases dependientes del javascript (.notavif .notwebp .avif .webp)
+    - claseDelHTMLDondeLocalizarLaImagen: la clase correspondiente a nuestro div 
