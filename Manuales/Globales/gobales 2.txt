@@ -1,0 +1,70 @@
+/** GLOBALS **/
+
+html{
+    font-size: 62.5%; // Para trabajar con rem
+    box-sizing: border-box;
+}
+  - box-sizing es una propiedad de CSS que controla cómo se calcula el tamaño total de un elemento. Por defecto, cuando se establece el ancho y la altura de un 
+    elemento, el tamaño total se calcula sumando el ancho y la altura a los valores de relleno y borde del elemento. Sin embargo, esto puede generar problemas de 
+    diseño, especialmente cuando se utilizan valores en porcentaje.
+    
+      - content-box: Este es el valor predeterminado. El tamaño total del elemento se calcula sumando el ancho y la altura a los valores de relleno y borde
+      - border-box: Con este valor, el tamaño total del elemento se calcula incluyendo el ancho y la altura de los bordes y relleno. En otras palabras, el ancho y la
+        altura establecidos se aplican al área interior del elemento, en lugar de al tamaño total.
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+  - El uso de box-sizing: inherit ayuda a mantener una consistencia en el diseño y evita posibles errores de cálculo del tamaño total de los elementos. Al hacer 
+    que los elementos hereden la propiedad de sus padres, se pueden aplicar estilos de caja (como padding y border) de manera más predecible y eficiente en todo el 
+    documento, lo que facilita la creación de diseños responsivos y escalables.
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+h1, h2, h3{
+    font-weight: 900;
+    margin: 1rem 0rem 4rem 0rem;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 5.8rem;
+}
+
+h3{
+    font-size: 5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.btn{
+    color: var(--gris);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris);
+    padding: .5rem 2rem;
+}
+
+.btn:hover{
+    color: var(--blanco);
+    background-color: var(--gris);
+}
