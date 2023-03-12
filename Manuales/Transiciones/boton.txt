@@ -1,0 +1,29 @@
+
+Creación de transición de fondo de color para el boton para CSS
+
+Sirve para la adaptación del cambio del color del fondo del boton cuando se trabaja con hover, indicando el elemento para realizar la transición
+y el tiempo de trnasición
+
+Estructura -->
+
+
+:root{
+    --blanco: #FFFFFF;
+    --negro: #111111;
+    --gris: #343A40;
+}
+
+.btn{
+    color: var(--gris);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris);
+    padding: .5rem 2rem;
+    transition: background-color 0.3s ease-out;
+}
+
+	- ease-out: función de tiempo de aceleración suave
+
+.btn:hover{
+    color: var(--blanco);
+    background-color: var(--gris);
+}
