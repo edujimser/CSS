@@ -1,0 +1,113 @@
+Creación de BEM (Block Element Modifier) para CSS
+
+Es una metodología que te ayuda a reutilizar código, conformada por una serie de convenciones de como nombrar en HTML y  CSS. 
+    - Evita el CSS anidado
+    - Ayuda a las correlaciones
+    - Debe ser reutilizable para cualquier otro proyecto
+
+
+Estructura Ejemplo -->
+
+    <div class="card">
+        <img class="card__imagen" src="producto.jpg">
+        <h2 class="card__titulo">Producto</h2>
+        <a class="card__boton" herf="producto.html">
+    </div>
+
+    - El doble guion bajo _ _ (Bloque Elemento): es una agregación para identificarlo al bloque perteneciente
+
+
+Estructura HTML -->
+
+    <div class="producto">
+        <img class="producto__imagen" src="/img/producto1.jpg" alt="p1">
+        <div class="producto__contenido">
+            <h3 class="producto__nombre"> Producto 1</h3>
+            <p class="producto__descripcion"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio at sunt laboriosam nihil, eaque tempore rerum temporibus nobis. Aperiam vitae ea harum laudantium sint dolorem aliquid laboriosam! Nostrum, ab unde?</p>
+            <div class="producto__precios">
+                <p class="producto__precio">199</p>
+            </div>
+            <button class="producto__boton">Añadir al carrito</button>
+        </div>
+    </div> <!-- Cierra la clase producto-->
+
+Estructura CSS -->
+
+.producto{
+    background-color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+.producto:last-of-type{
+    margin-bottom: 0;
+}
+
+.producto__contenido{
+    padding: 2rem;
+}
+
+.producto__nombre{
+    font-size: 2rem;
+}
+
+.producto__descripcion{
+    color: #343a40;
+    padding: 0rem;
+}
+
+.producto__precios{
+    display: flex;
+    justify-content: space-between;
+}
+
+.producto__precio{
+    color: green;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.producto__precio--oferta{
+    color: red;
+    font-size: 2rem;
+    font-weight: 800;
+    text-decoration: line-through;
+}
+
+
+.producto__boton{
+    all:unset;
+    background-color: var(--azul);
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.producto__boton:hover{
+   background-color: #e82d0c;
+}
+
+
+Estructura modificador HTML -->
+
+    <div class="producto__precios">
+        <p class="producto__precio producto__precio--oferta">199</p>
+        <p class="producto__precio">199</p>
+    </div
+
+
+Estructura modificador CSS -->
+
+.producto__precio{
+    color: green;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.producto__precio--oferta{
+    color: red;
+    font-size: 2rem;
+    font-weight: 800;
+    text-decoration: line-through;
+}
