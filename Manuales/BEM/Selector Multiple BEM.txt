@@ -1,0 +1,43 @@
+Creación de BEM con selector múltiple 
+
+
+Nos ayuda a compaginar las etiquetas contenedor dentros de los BEM y aplicar el mismo estilo
+	
+	- Debe ir declarado en la parte de general del CSS
+
+
+
+Estructura Ejemplo HTML -->
+
+<body>
+<section class="introduccion">
+	<div class="introduccion__contenedor>
+		.
+		.
+		.
+	</div>
+</section>
+
+<section class="articulos">
+	<div class="articulos__contenedor>
+		.
+		.
+		.
+	</div>
+</body>
+
+
+
+Estructura Ejemplo CSS -->
+
+[class$="__contenedor"]{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}@media (min-width: 2000px){
+    [class$="__contenedor"]{
+        max-width: 190rem;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
