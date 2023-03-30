@@ -1,0 +1,20 @@
+Creación de transición de fondo rotado en CSS
+
+Consejo:
+	- Realizar un una imagen vectiorial con el fondo e introducir con background-image
+
+
+Estructura HTML -->
+
+    <div class="mask">
+        <section class="seguridad">
+  		.
+		.
+		.(Demás componentes de la sección)
+		.
+		.
+        </section>
+    </div>
+
+
+Estructura CSS -->

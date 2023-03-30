@@ -1,0 +1,47 @@
+Creación de transición de fondo rotado en CSS
+
+Consejo:
+	- Realizar un una imagen vectiorial con el fondo e introducir con background-image
+
+
+Estructura HTML -->
+
+	<section class="seguridad">
+  		.
+		.
+		.(Demás componentes de la sección)
+		.
+		.
+	</section>
+
+
+
+Estructura CSS -->
+
+.seguridad{
+    background-color: var(--primario);
+    padding: 20rem 0;
+    position: relative;
+    margin-top: 10rem;
+    overflow: hidden;
+}
+
+.seguridad::before, .seguridad::after{
+    background-color: var(--blanco);
+    content: '';
+    height: 20rem;
+    width: 130%;
+    position: absolute;
+}
+
+.seguridad::before{
+    bottom:-10rem;
+    left:0;
+    transform: rotate(3deg);
+}
+
+.seguridad::after{
+    top:-10rem;
+    left:0;
+    transform: rotate(3deg);
+}
